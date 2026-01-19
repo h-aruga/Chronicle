@@ -8,6 +8,17 @@ While autonomous AI agents perform complex reasoning to advance development, the
 
 Chronicle leverages **xAPI**, a proven standard for tracking learning experiences, to capture agent behaviors. By transforming raw logs into "structured memories of development experience," agents can refer back to their own history to optimize performance or replicate successful patterns from other agents.
 
+## How it Works
+
+```mermaid
+graph LR
+    subgraph Agent Environment
+        A[Autonomous Agent] <--> M[Chronicle MCP Proxy]
+    end
+    M -- "Log Experience (xAPI)" --> L[(LRS)]
+    L -- "Provide Context (SBOP)" --> M
+```
+
 ## Project Goals
 
 We are advancing the project with the following key milestones:
